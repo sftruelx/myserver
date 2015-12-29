@@ -22,6 +22,7 @@ public class UserController {
     @RequestMapping("/jsonusers*")
     public List<User> execute2(ModelMap model, HttpServletRequest request) {
     	String username = request.getParameter("username");
+    	System.out.println("user name " + username);
     	model.addAttribute("userList", userManager.getUsers());
         return userManager.getUsers();
     }
